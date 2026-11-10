@@ -9,3 +9,7 @@ Route::view('/program', 'program');
 Route::view('/about-us', 'about-us');
 Route::view('/contact-us', 'contact-us');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
